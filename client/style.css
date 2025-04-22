@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Pacifico&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:wght@400;500;600;700&family=Special+Gothic+Expanded+One&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+}
+
+body{
+    overflow: hidden;
+    transition: 3s linear !important;
+}
+
+section{
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1500px;
+    text-align: center;
+}
+
+.main{
+    background-image: url("./assets/earth-depicted-anime-style.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    min-height: 100vh;
+}
+
+.login-page .container{
+    margin-top: 5rem;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+}
+
+.navbar-brand{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.login-heading{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.home .description .title{
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    text-align: center;
+    color: #ffc107;
+    text-shadow: 2px 2px 5px black;
+
+}
+
+.home .description{
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 4rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.home .game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.start-btn{
+    display: inline-block;
+    margin-top: 1rem;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 15px;
+    border: 2px solid #17a2b8;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: .2s linear !important;
+   
+}
+
+.start-btn:hover{
+    background-color: #17a2b8;
+    color: #fff;
+    text-decoration: none;
+}
+
+.game-options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(./assets/map-1662957_1280.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    max-width: 100%;
+    gap: 1rem;
+    min-height: 100vh;
+}
+
+.game-options .start-text{
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 5px black;
+}
+
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 2rem ;
+    padding: 2rem;
+}
+
+.dot {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    padding: 2rem;
+    margin: 0 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 10px;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.748); 
+  }
+
+.dot a{
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.options #guessCountry{
+    background-color: #ffc107;
+    transition: .2s all ease-in;
+}
+
+.options #guessCountry:hover{
+    background-color: #17a2b8;
+}
+
+.options #guessCapital{
+    background-color: #dc3545;
+    transition: .2s all ease-in;
+}
+
+.options #guessCapital:hover{
+    background-color: #17a2b8;
+}
+
+.options #guessFlag{
+    background-color: #007bff;
+    transition: .2s all ease-in;
+}
+
+.options #guessFlag:hover{
+    background-color: #17a2b8;
+}
+
+.main-country{
+    background-image: url(./assets/76819.jpg);
+    min-height: 100vh;
+}
+
+.find-country{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.find-country .game-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.game-box .left-section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: 30rem;
+    text-align: left;
+    margin: 0 5rem;
+    color: #fff;
+
+}
+
+.left-section .country-title h3{
+    color: #007bff;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.left-section .country-title p{
+    color: #fff;
+}
+
+
+
+.game-box .right-section .box{
+    flex-wrap: 27rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin-top: 2rem;
+}
+
+
+.game-box .right-section .box .svg{
+    width: 100%;
+    height: 650px; 
+}
+
