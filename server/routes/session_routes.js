@@ -1,6 +1,6 @@
 const {Router} = require ("express")
 const sessionController = require("../controllers/session_controllers")
-const { authenticator, isAdmin } = require("./middleware/authMiddleware");
+const { authenticator, isAdmin } = require("../middleware/authmiddleware");
 
 
 const sessionRouter = Router()
