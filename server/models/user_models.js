@@ -21,15 +21,26 @@ class User {
     return response.rows.map(u => new User(u));
   }
 
-  static async getOneById(id) {
-    const response = await db.query("SELECT * FROM users WHERE id = $1;", [id]);
 
-    if (response.rows.length != 1) {
-      throw new Error("Unable to locate user.")
-    }
+   static async getOneByEmail(email) {
+    const response = await db.query("SELECT * FROM users WHERE email = $1;", [email]);
 
-    return new User(response.rows[0]);
-  }
+     if (response.rows.length != 1) {
+       throw new Error("Unable to locate user.")
+     }
+
+     return new User(response.rows[0]);
+ }
+
+  // static async getOneById(id) {
+  //   const response = await db.query("SELECT * FROM users WHERE id = $1;", [id]);
+
+  //   if (response.rows.length != 1) {
+  //     throw new Error("Unable to locate user.")
+  //   }
+
+  //   return new User(response.rows[0]);
+  // }
 
   static async create(data) {
     const { username, email, password } = data;

@@ -1,15 +1,14 @@
-const {Router} = require ("express")
-const userController = require("../controllers/user_controllers")
-const { authenticator } = require('./middleware/authMiddleware');
+const express = require('express');
+const router = express.Router();
+const controller = require('../controllers/user_controllers');
+const { authenticator, isAdmin } = require('./middleware/authMiddleware');
 
-const userRouter = Router()
+// Protect routes
+router.get("/", authenticator, isAdmin, controller.index);
+router.get("/:id", authenticator, controller.show);
+router.put("/:id", authenticator, controller.update);
+router.delete("/:id", authenticator, controller.destroy);
 
-userRouter.get("/", userController.index)
-userRouter.get("/:id", userController.show)
-userRouter.post("/", userController.create)
-userRouter.patch("/:id", userController.update)
-userRouter.delete("/:id", userController.destroy)
-
-module.exports = userRouter;
+module.exports = router;
 
 
