@@ -1,20 +1,38 @@
 {
   "name": "alphaproject",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "dev": "nodemon -L index.js",
+    "start": "node index.js",
+    "setup-db": "node ./server/database/setup.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "jest": "^29.7.0",
     "jsonwebtoken": "^9.0.2",
     "pg": "^8.14.1"
-  }
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-fetch-mock": "^3.0.3",
+    "nodemon": "^3.1.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Perspicacity11/LaFosseAlphaProject.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Perspicacity11/LaFosseAlphaProject/issues"
+  },
+  "homepage": "https://github.com/Perspicacity11/LaFosseAlphaProject#readme",
+  "description": ""
 }
